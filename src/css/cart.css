@@ -23,7 +23,7 @@
     flex-direction: row;
 }
 
-.cart-component:nth-last-child(){
+.cart-component:last-child{
     margin-bottom: 40px;
 }
 

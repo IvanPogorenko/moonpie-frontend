@@ -13,70 +13,55 @@ function Auth({authData, setAuthData}) {
         setAuthData(newData);
     };
 
-    //registration
-    // const [formData, setFormData] = useState({
-    //     username: '',
-    //     email: '',
-    //     password: '',
-    // });
-    //
-    // const [error, setError] = useState(null);
-    // const [success, setSuccess] = useState(false);
-    //
-    // const handleChange = (e) => {
-    //     setFormData({
-    //         ...formData,
-    //         [e.target.name]: e.target.value,
-    //     });
-    // };
-    //
-    // const handleSubmit = async (e) => {
-    //     e.preventDefault();
-    //     setError(null);
-    //     setSuccess(false);
-    //
-    //     try {
-    //         const response = await registerUser(formData);
-    //         console.log('User registered successfully:', response);
-    //         setSuccess(true);
-    //     } catch (error) {
-    //         setError(error.message);
-    //     }
-    // };
+    const [email, setEmail] = useState('');
+    const [phone, setPhone] = useState('');
+    const [password, setPassword] = useState('');
 
-    //auth
-    // const [formData, setFormData] = useState({
-    //     email: '',
-    //     password: '',
-    // });
-    //
-    // const [error, setError] = useState(null);
-    // const [success, setSuccess] = useState(false);
-    //
-    // const handleChange = (e) => {
-    //     setFormData({
-    //         ...formData,
-    //         [e.target.name]: e.target.value,
-    //     });
-    // };
-    //
-    // const handleSubmit = async (e) => {
-    //     e.preventDefault();
-    //     setError(null);
-    //     setSuccess(false);
-    //
-    //     try {
-    //         const token = await authenticateUser(formData.email, formData.password);
-    //         if (token) {
-    //             localStorage.setItem('token', token);
-    //             setSuccess(true);
-    //         } else {
-    //             setError('Authentication failed: No token received');
-    //         }
-    //     } catch (error) {
-    //         setError(error.message);
-    //     }
-    // };
+    const [error, setError] = useState(null);
+    const [loading, setLoading] = useState(false);
+
+    const handleSubmitRegister = async () => {
+
+        if (!email || !phone || !password) {
+            setError('Все поля должны быть заполнены');
+            return;
+        }
+
+        setLoading(true);
+        setError(null);
+
+        try {
+            const userData = { email, phone, password };
+            const response = await registerUser(userData);
+            console.log('User registered:', response);
+        } catch (error) {
+            setError('Ошибка регистрации, попробуйте еще раз');
+        } finally {
+            setLoading(false);
+        }
+    };
+
+    const handleSubmitAuth = async () => {
+
+        if (!email || !password) {
+            setError('Все поля должны быть заполнены');
+            return;
+        }
+
+        setLoading(true);
+        setError(null);
+
+        try {
+            // Вызов функции для отправки данных на сервер
+            const response = await authenticateUser(email, password);
+            console.log('User authenticated:', response);
+            // Здесь можно перенаправить пользователя на другую страницу
+        } catch (error) {
+            setError('Ошибка авторизации, попробуйте еще раз');
+        } finally {
+            setLoading(false);
+        }
+    };
 
     return (
         <>
@@ -106,8 +91,8 @@ function Auth({authData, setAuthData}) {
                                         type="email"
                                         name="email"
                                         placeholder='iivanow@gmail.com'
-                                        // value={formData.email}
-                                        // onChange={handleChange}
+                                        value={email}
+                                        onChange={(e) => setEmail(e.target.value)}
                                         required
                                     />
                                 </label>
@@ -122,8 +107,8 @@ function Auth({authData, setAuthData}) {
                                             name="phone"
                                             placeholder='+7-999-999-99-99'
                                             pattern='+7-[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}'
-                                            // value={formData.email}
-                                            // onChange={handleChange}
+                                            value={phone}
+                                            onChange={(e) => setPhone(e.target.value)}
                                             required
                                         />
                                     </label>
@@ -137,8 +122,8 @@ function Auth({authData, setAuthData}) {
                                         id='password'
                                         name="password"
                                         placeholder='**********************'
-                                        // value={formData.email}
-                                        // onChange={handleChange}
+                                        value={password}
+                                        onChange={(e) => setPassword(e.target.value)}
                                         required
                                     />
                                 </label>
@@ -180,7 +165,9 @@ function Auth({authData, setAuthData}) {
                                     </div>
                                     <a className='pop-up__forgot-password' href='#'>Забыли пароль?</a>
                                 </div> : null}
-                            {flag === 0 ? <button className="pop-up__btn">Войти</button> :
+                            {flag === 0 ? <button className="pop-up__btn" onClick={
+                                    () => {handleSubmitAuth()}
+                                }>Войти</button> :
                                 <button className="pop-up__btn" onClick={
                                     () => {
                                         const password = document.getElementById('password')
@@ -188,6 +175,7 @@ function Auth({authData, setAuthData}) {
                                         if (password.value !== password_again.value) {
                                             alert('Пароли должны совпадать!')
                                         }
+                                        handleSubmitRegister()
                                     }
                                 }>Зарегистрироваться</button>}
                             <div className="pop-up__bottom-menu">

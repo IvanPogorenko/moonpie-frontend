@@ -4,6 +4,9 @@ import '../css/home.css';
 import Auth from "../components/Auth";
 
 function Home() {
+
+    console.log(123)
+
     return(
         <>
             <section className="main-page__first-block">

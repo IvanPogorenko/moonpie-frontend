@@ -1,6 +1,6 @@
 import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import Header from './components/Header'
-import Home from './pages/Home'
+import Home from "./pages/Home";
 import Brand from './pages/Brand'
 import Fabrics from './pages/Fabrics'
 import Contacts from './pages/Contacts'
