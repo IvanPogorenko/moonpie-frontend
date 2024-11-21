@@ -1,0 +1,133 @@
+.fabrics-first-block{
+    background-image: url('/public/img/fabrics_first.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    box-shadow: 0 0 0 700px rgba(0, 0, 0, .4) inset;
+    width: 100%;
+    height: 600px;
+    margin-bottom: 130px;
+}
+
+.fabrics__container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.fabrics__text{
+    text-align: center;
+    max-width: 1288px;
+}
+
+.fabrics__cards{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 130px;
+}
+
+.fabrics__card{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 266px;
+    height: 663px;
+    flex: 180px;
+    margin-right: 10px;
+    position: relative;
+    box-shadow: 0 0 0 700px rgba(0, 0, 0, .4) inset;
+}
+
+.mint{
+    background-image: url('/public/img/mint.png');
+}
+
+.mint:hover{
+    box-shadow: 0 0 0 0px;
+}
+
+.mint:hover .fabrics__color-name{
+    font-size: 0;
+}
+
+.graphite:hover{
+    box-shadow: 0 0 0 0px;
+}
+
+.graphite:hover .fabrics__color-name{
+    font-size: 0;
+}
+
+.dark-blue:hover{
+    box-shadow: 0 0 0 0px;
+}
+
+.dark-blue:hover .fabrics__color-name{
+    font-size: 0;
+}
+
+.white:hover{
+    box-shadow: 0 0 0 0;
+}
+
+.white:hover .fabrics__color-name{
+    font-size: 0;
+}
+
+.blue:hover{
+    box-shadow: 0 0 0 0px;
+}
+
+.blue:hover .fabrics__color-name{
+    font-size: 0;
+}
+
+.graphite{
+    background-image: url('/public/img/graphit.png');
+}
+
+.dark-blue{
+    background-image: url('/public/img/darkBlue.png');
+}
+
+.white{
+    background-image: url('/public/img/white.png');
+}
+
+.blue{
+    background-image: url('/public/img/blue.png');
+}
+
+.fabrics__color-name{
+    position: absolute;
+    font-size: 30px;
+    color: white;
+    bottom: 0;
+    right: 5%;
+    transform: rotate(90deg);
+    transform-origin: top right;
+    z-index: 1000;
+}
+
+.about-fabrics__container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about-fabrics__info-block{
+    margin-top: 130px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about-fabrics__fabrics-composition{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fabrics-composition__info{
+    margin-right: 113px;
+}

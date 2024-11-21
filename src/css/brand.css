@@ -1,0 +1,75 @@
+.brand-first-block{
+    max-width: 100%;
+    height: 570px;
+    box-shadow: 0 0 0 700px rgba(0, 0, 0, .4) inset;
+    background-image: url('/public/img/brand_first.png');
+    background-position: center;
+    background-size: cover;
+    margin-bottom: 130px;
+}
+
+.about-brand{
+    margin-bottom: 130px;
+}
+
+.about-brand__container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about-brand__text{
+    max-width: 1296px;
+    text-align: center;
+    line-height: 45px;
+}
+
+.about-brand__image{
+    margin-top: 130px;
+}
+
+.company__container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.company__text{
+    max-width: 1293px;
+    line-height: 45px;
+    margin-bottom: 50px;
+}
+
+.company__info-group{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 130px;
+    width: 1380px;
+}
+
+.company__group-info{
+    max-width: 855px;
+    margin-left: 50px;
+}
+
+.company__details{
+    display: flex;
+    justify-content: space-between;
+    width: 1156px;
+    margin-top: 130px;
+    margin-bottom: 130px;
+}
+
+.for-everyone__container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.for-everyone__text{
+    max-width: 1296px;
+    line-height: 45px;
+    text-align: center;
+    margin-bottom: 30px;
+}

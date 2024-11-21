@@ -1,0 +1,225 @@
+.account{
+    margin-top: 143px;
+}
+
+.account__container{
+    max-width: 1296px;
+    margin: 0 auto;
+    display: flex;
+}
+
+.account__nav{
+    width: 254px;
+    box-sizing: border-box;
+    min-height: 860px;
+    background: rgba(247, 236, 218, 1);
+    padding: 22px 17.5px 0 17.5px;
+    margin-right: 70px;
+}
+
+.account__links{
+    width: 219px;
+}
+
+.account__list-item{
+    margin-bottom: 32px;
+}
+
+.account__link{
+    font-size: 25px;
+    font-weight: 400;
+    color: black;
+    text-decoration: none;
+}
+
+.account__link_active{
+    color: rgba(114, 127, 144, 1);
+}
+
+.account__main{
+    width: 100%;
+}
+
+.account__headline{
+    font-weight: 400;
+    font-size: 50px;
+}
+
+.account__image{
+    margin-top: 26px;
+    position: relative;
+    cursor: pointer;
+}
+
+.account__add-image{
+    position: absolute;
+    bottom: 0;
+    left: 213px;
+}
+
+.account__bio-fields{
+    display: flex;
+}
+
+.account__field{
+    position: relative;
+    margin-top: 60px;
+}
+
+.account__bio-field:not(:last-child){
+    margin-right: 24px;
+}
+
+.account__field-name{
+    font-size: 20px;
+    font-weight: 400;
+    color: rgba(114, 127, 144, 1);
+}
+
+.account__input{
+    border: none;
+    outline: none;
+    width: 306px;
+    padding: 0 0 5px 0;
+    background: transparent;
+    border-bottom: 2px solid rgba(214, 194, 163, 1);
+    font-family: Montserrat, system-ui;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24.38px;
+    text-align: left;
+}
+
+.account__card{
+    display: flex;
+    margin-top: 24px;
+}
+
+.account__card-image{
+    margin-right: 24px;
+}
+
+.account__card-info{
+    width: 100%;
+}
+
+.account__card-headline{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.account__card-text{
+
+}
+
+.account__card-params{
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+.account__card-deliver-params{
+    margin: 0;
+}
+
+.account__card-param{
+    margin-right: 24px;
+    margin-bottom: 12px;
+    font-size: 16px;
+    font-weight: 400;
+    color: rgba(114, 127, 144, 1);
+}
+
+.account__card-tracker{
+    margin-top: 62px;
+}
+
+.account__card-track{
+    width: 70%;
+}
+
+.close-svg{
+    display: flex;
+    justify-content: end;
+    cursor: pointer;
+}
+
+.account__card-link{
+    font-size: 16px;
+    font-weight: 400;
+    border-bottom: 1px solid black;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.account__card-track{
+    padding: 0 0 56px 60px;
+    background: rgba(247, 236, 218, 1);
+    display: inline-block;
+}
+
+.account__track-headline{
+    font-size: 32px;
+    font-weight: 500;
+}
+
+.account__track-text{
+    padding-left: 20px;
+}
+
+.account__track-status{
+    font-size: 32px;
+    font-weight: 400;
+    color: rgba(114, 127, 144, 1);
+    margin-top: 60px;
+}
+
+.account__track-status_active{
+    color: black;
+}
+
+.account__item-card-btn{
+    font-family: Montserrat, system-ui;
+    font-size: 17px;
+    font-weight: 500;
+    color: white;
+    background-color: rgba(114, 127, 144, 1);
+    padding: 17px 49px;
+    border: 0;
+    outline: 0;
+    margin-top: 75px;
+}
+
+.account__data-actions{
+    display: flex;
+    flex-direction: column;
+}
+
+.account__save-btn{
+    background-color: rgba(247, 236, 218, 1);
+    color: rgba(114, 127, 144, 1);
+    font-family: Montserrat, system-ui;
+    font-size: 17px;
+    font-weight: 500;
+    padding: 14px 47px;
+    outline: 0;
+    border: 1px solid rgba(114, 127, 144, 1);
+    margin-top: 60px;
+    width: 189px;
+    cursor: pointer;
+}
+
+.account__log-out{
+    font-size: 20px;
+    font-weight: 600;
+    color: rgba(114, 127, 144, 1);
+    border-bottom: 1px solid rgba(114, 127, 144, 1);
+    display: inline-block;
+    cursor: pointer;
+    margin-top: 60px;
+    margin-bottom: 83px;
+    width: 203px;
+}
